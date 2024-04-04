@@ -1,7 +1,7 @@
 # TD n°3 - Entrées / Sorties
  
 Dans ce TD, nous allons utiliser les fonctions `open`, `close`, `read`, `write`, et `lseek` pour manipuler les fichiers 
-directement en utilisant les appels système. Il ne faut donc pas utiliser les fonctions plus haut niveau telles que 
+directement en utilisant les appels système. Il ne faut donc pas utiliser les fonctions de plus haut niveau telles que 
 `fopen`, `fgetc`, `fputc`, `printf`, etc.
 
 Si nécessaire, vous pouvez vous référer aux transparents du second cours.
