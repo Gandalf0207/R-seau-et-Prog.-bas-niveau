@@ -1,9 +1,8 @@
-# Réseaux  et Programmation bas niveau
+# Réseaux et Programmation bas niveau
 
 ## TD1 : suivis de dev
 
-*date : 19/10/2026*
-
+_date : 19/10/2026_
 
 1. Copie du script donnée dans l'énnoncé
 2. Exécution de la commande gcc simple.c -> création d'un fichier a.out et d'un fichier `simple`
@@ -18,4 +17,4 @@
 
 ---
 
-*by Quentin*
+_by Quentin_
