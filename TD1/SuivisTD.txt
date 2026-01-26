@@ -20,7 +20,10 @@ _date : 19/10/2026_
     - affiche les valeur : a = 13 et b : le pointeur de a
 10. Le soucis vient du fait que b n'est pas un obj mais un pointeur, le compilateur nous alerte sur cette valeur
 11. Correction du script avec un long unsigned
-
+12. Script pour affciher les cases mémoires des valeurs d'un tableau, on voit que la dif est de 4, on en déduit que la taille d'un int est de 4 octects
+13. La taille d'un float est également de 4 octects
+14. La différence devrait étre de 4 octect,  elle est de 4 octect. On prend la case mémoire de t et on lui ajoute un int soit 4 octect
+15. 
 
 
 
