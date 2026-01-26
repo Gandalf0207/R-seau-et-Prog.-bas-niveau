@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-#define MESSAGE "Super\n"
-
 int main()
 {
     printf("%i", dbl(4));
