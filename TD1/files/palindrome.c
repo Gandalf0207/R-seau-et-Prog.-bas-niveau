@@ -1,10 +1,6 @@
 #include <stdio.h>
+#include <string.h>
 
-int main(){
-    char* list = "kayak";
-    printf("%i", palindrome(list));
-
-}
 
 int palindrome(char *s) {
    int len = strlen(s);
@@ -19,4 +15,9 @@ int palindrome(char *s) {
         }
     }
     return 1;
+}
+
+
+int main(){
+
 }

@@ -2,9 +2,7 @@
 
 #include "famille.h"
 
-int main()
-{
-}
+
 
 int age_total(struct Famille obj)
 {
@@ -14,4 +12,8 @@ int age_total(struct Famille obj)
         total += obj.enfants[i].age;
     }
     return total;
+}
+
+int main()
+{
 }

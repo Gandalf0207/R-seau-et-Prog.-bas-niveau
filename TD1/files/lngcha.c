@@ -1,6 +1,14 @@
 #include <stdio.h>
 
-int lngcha(char *chaine, int len)
+int lngcha(char *chaine)
 {
-    return fgets(chaine, len, stdin);
+    int cpt;
+    do {
+        cpt++;
+    } while(&chaine[cpt] != "\0");
+    return cpt-1;
+}
+
+int main() {
+
 }

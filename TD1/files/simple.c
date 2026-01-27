@@ -4,6 +4,6 @@
 
 int main()
 {
-    printf("Youpi \n");
+    printf("Youpi !\n");
     printf(MESSAGE);
 }
