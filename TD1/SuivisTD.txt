@@ -25,7 +25,8 @@ _date : 19/10/2026_
 14. La différence devrait étre de 4 octect,  elle est de 4 octect. On prend la case mémoire de t et on lui ajoute un int soit 4 octect
 15. Script pour afficher valeur 1 à 100 boucle for
 16. Un script qui sort les nombre entre 1 et 100 qui sont divisible ni par 3 ni par 7
-
+17. Un script pour trouver le plus petit intier divisible par 260 et 152
+18. Ecriture de la méthode pour obtenir la longueur de la chain de caractère
 
 
 ---
