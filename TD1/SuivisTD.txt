@@ -27,7 +27,10 @@ _date : 19/10/2026_
 16. Un script qui sort les nombre entre 1 et 100 qui sont divisible ni par 3 ni par 7
 17. Un script pour trouver le plus petit intier divisible par 260 et 152
 18. Ecriture de la méthode pour obtenir la longueur de la chain de caractère
-19. 
+19. Fonction qui détermine si un mot est un palindrome ou non
+20. Définition d'une structure Famille
+21. La taille en mémoire est de 56 octects
+22. calcul age total
 
 ---
 

@@ -7,16 +7,16 @@ int main(){
 }
 
 int palindrome(char *s) {
-    int len = strlen(s) -1;
-    printf("%i", len);
+   int len = strlen(s);
 
-    int i = 0;
-    while (i < len/2 + 1) {
-        if((s+i) !=(s+len-i)) {
+    if (len > 0 && s[len - 1] == '\n') {
+        len--;
+    }
+
+    for (int i = 0; i < len / 2; i++) {
+        if (s[i] != s[len - 1 - i]) {
             return 0;
         }
-        i++;
     }
     return 1;
-
 }
