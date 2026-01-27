@@ -27,7 +27,7 @@ _date : 19/10/2026_
 16. Un script qui sort les nombre entre 1 et 100 qui sont divisible ni par 3 ni par 7
 17. Un script pour trouver le plus petit intier divisible par 260 et 152
 18. Ecriture de la méthode pour obtenir la longueur de la chain de caractère
-
+19. 
 
 ---
 
