@@ -2,21 +2,24 @@ import subprocess
 
 
 def execution(AlllistCmd):
-    cpt = 1
-    cpt2 = 1
+    cpt = 0
+    cpt2 = 0
+    reussit = 0
     for packCmd in AlllistCmd:
-        print("-----------------TD : ", cpt2, "-----------------")
         cpt2 += 1
+        print("-----------------TD : ", cpt2, "-----------------")
         for cmd in packCmd:
-            print("Test : ", cpt)
             cpt+=1
+            print("Test : ", cpt)
 
             try:
                 resultat = subprocess.run(cmd, shell=True, capture_output=True, text=True)
                 print(resultat.stdout.strip())
+                reussit += 1
             except Exception as e:
                 print("Execption : ", e)
         print("\n")
+    print("Tests Passés : ", reussit, "/", cpt)
 
 
 listCmd = [
@@ -52,13 +55,20 @@ listCmd = [
 
         #   mer. 28 janv. 22:53
         r'''find . -name main-cent-premiers.c -exec bash -c "gcc -Werror {} && (./a.out | grep -e '^1 2 3 4 5' | grep -q '96 97 98 99 100[ ]$' && echo {} OK || echo {} ÉCHEC) || echo {} ÉCHEC COMPIL." \; 2>/dev/null | sort''',
+
+        # jeu. 29 janv. 13:26
+        r'''find . -name main-ni-par-3-ni-par-7.c -exec bash -c "gcc -Werror {} && ./a.out | tr '\n' ' ' | grep -q '1 2 4 5 8 10 11 13 16 17 19 20 22.*88 89 92 94 95 97 100' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
 
 
     #--------TD2---------#
     [
         # mer. 28 janv. 22:47
-        r'''	find . -name maximum.c -exec bash -c "gcc -c -Werror {} && echo {} OK || echo {} ÉCHEC" \; | sort''',
+        r'''find . -name maximum.c -exec bash -c "gcc -c -Werror {} && echo {} OK || echo {} ÉCHEC" \; | sort''',
+
+        # jeu. 29 janv. 13:14
+        r'''find . -name maximum.h -exec bash -c "gcc -fsyntax-only {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
     ],
    ]
 

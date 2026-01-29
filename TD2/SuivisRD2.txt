@@ -4,7 +4,12 @@
 
 _date : 30/01/2026_
 
-1. 
+1. Ecriture du script maximum
+2. Si on ne le donne pas, on ne peut pas connaitre sa taille
+et donc on va dépasser sur les case mémoire qui suivent celle
+du tableau et donc énalyser des valeurs qui ne sont peut etre
+pas des nombres
+3. 
 
 ---
 
