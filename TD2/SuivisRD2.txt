@@ -9,7 +9,12 @@ _date : 30/01/2026_
 et donc on va dépasser sur les case mémoire qui suivent celle
 du tableau et donc énalyser des valeurs qui ne sont peut etre
 pas des nombres
-3. 
+3. On donne les valeur de pointeur de x et y (avec &) et on
+affecte là où vont les pointeurs les résultats des opérations.
+Sans retour de la fonction on a stocké les valeurs
+4. Application de la méthode pour stocker directement les valeurs
+dans les cases mémoire à l'aide des pointeurs.
+5. Test de la fonction de la question précédente.   
 
 ---
 
