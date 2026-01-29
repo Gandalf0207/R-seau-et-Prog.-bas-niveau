@@ -14,8 +14,8 @@ affecte là où vont les pointeurs les résultats des opérations.
 Sans retour de la fonction on a stocké les valeurs
 4. Application de la méthode pour stocker directement les valeurs
 dans les cases mémoire à l'aide des pointeurs.
-5. Test de la fonction de la question précédente.   
-
+5. Test de la fonction de la question précédente.
+6. 
 ---
 
 _by Quentin_

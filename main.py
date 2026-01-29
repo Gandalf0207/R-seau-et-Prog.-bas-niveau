@@ -69,6 +69,9 @@ listCmd = [
         # jeu. 29 janv. 13:14
         r'''find . -name maximum.h -exec bash -c "gcc -fsyntax-only {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
+        # jeu. 29 janv. 20:29
+        r'''find . -name minmax.c -exec bash -c "gcc -c -Werror {} && echo {} OK || echo ÉCHEC COMPIL." \; | sort''',
+
     ],
    ]
 
