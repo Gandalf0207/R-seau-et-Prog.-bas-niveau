@@ -6,7 +6,7 @@ int dbl(int a) {
 
 int main()
 {
-    printf("%i", dbl(4));
+    printf("résultat: %i", dbl(4));
 }
 
 
