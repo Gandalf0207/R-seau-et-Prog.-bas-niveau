@@ -15,7 +15,14 @@ Sans retour de la fonction on a stocké les valeurs
 4. Application de la méthode pour stocker directement les valeurs
 dans les cases mémoire à l'aide des pointeurs.
 5. Test de la fonction de la question précédente.
-6. 
+6. On retourne une adresse d'une variablz locale, qui sera
+effacé à la fin de la fonction.
+7. Correction de pointeur et allocation de mémoire stable
+8. Ecriture du script UnSurDeux
+9. Ecriture d'un script pour afficher une matrice + apprentissage
+du fonctionnement des matrice : int**
+10. 
+
 ---
 
 _by Quentin_
