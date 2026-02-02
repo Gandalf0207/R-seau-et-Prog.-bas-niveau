@@ -1,10 +1,6 @@
 #include <stdio.h>
 
-struct Matrice {
-        int nb_lignes;
-        int nb_colonnes;
-        int **valeurs;
-    };
+#include "matrice.h"
 
 
 void affiche(struct Matrice mat) {

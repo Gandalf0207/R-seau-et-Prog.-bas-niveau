@@ -81,6 +81,11 @@ listCmd = [
         # dim. 1 févr. 21:35
         r'''find . -name minmax.h -exec bash -c "gcc -Wall -Werror -fsyntax-only {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
+        # lun. 1 févr. 08:49
+        r'''find . -name nvtab.c -exec bash -c "gcc -Werror -c {} && echo {} OK || echo {} ÉCHEC COMPIL." \;''',
+
+        # lun. 1 févr. 19:32
+        r'''find . -name unsurdeux.c -exec bash -c "gcc -c -Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
    ]
 
