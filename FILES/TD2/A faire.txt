@@ -7,7 +7,7 @@ spécification de la fonction dans le fichier entête
 
 - Une fonction void minmax(int *t, int n, int *pmin, int *pmax) :
 un fichier minmax.c pour sa définition et un fichier minmax.h pour
-sa déclaration (Q4)  
+sa déclaration (Q4)  ok 
 
 - Définir une fonction int* nvtab(int T[], int n) dans un fichier
 nvtab.c (Q7 - la fonction doit retourner une copie des n premiers entiers de T)

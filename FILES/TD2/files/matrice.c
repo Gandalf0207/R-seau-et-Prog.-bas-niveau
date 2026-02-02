@@ -3,7 +3,7 @@
 
 struct Matrice matrice(int nbl, int nbc, int* valeur){
     // création des tableau vide avec malloc
-
+    
 
 
 };
