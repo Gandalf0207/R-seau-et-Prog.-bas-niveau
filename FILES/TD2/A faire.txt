@@ -1,0 +1,22 @@
+- un fichier maximum.c contenant une définition de la fonction int
+maximum(int T[], int n) (qui étant donné un tableau d'entiers non
+vide de longueur n retourne la plus grande valeur du tableau) et un
+fichier maximum.h contenant sa déclaration (Q1). Vous ajouterez la
+spécification de la fonction dans le fichier entête
+(sous la forme« Donnée / Résultat »).    ok
+
+- Une fonction void minmax(int *t, int n, int *pmin, int *pmax) :
+un fichier minmax.c pour sa définition et un fichier minmax.h pour
+sa déclaration (Q4)  
+
+- Définir une fonction int* nvtab(int T[], int n) dans un fichier
+nvtab.c (Q7 - la fonction doit retourner une copie des n premiers entiers de T)
+
+- Définir la fonction int* unsurdeux(int T[], int n) dans un fichier
+unsurdeux.c (Q8 - cette fonction doit retourner un (nouveau) tableau
+contenant tous les entiers de T se trouvant à des indices pairs, dans
+le même ordre)
+
+- Une fonction void affiche(struct Matrice) dans un fichier matrice.c
+(Q9 du sujet) et un fichier matrice.h qui contiendra la déclaration de
+la structure d'une matrice et la déclaration de la fonction affiche.
