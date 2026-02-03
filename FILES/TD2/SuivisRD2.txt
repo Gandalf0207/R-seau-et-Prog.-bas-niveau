@@ -21,7 +21,10 @@ effacé à la fin de la fonction.
 8. Ecriture du script UnSurDeux
 9. Ecriture d'un script pour afficher une matrice + apprentissage
 du fonctionnement des matrice : int**
-10. 
+10. Ecriture de la fonction de construction de la matrice
+11. Test de la fonction précédente
+12. Fonction permettant de librérer la mémoire alloué
+13. Multiplication de matrice 
 
 ---
 

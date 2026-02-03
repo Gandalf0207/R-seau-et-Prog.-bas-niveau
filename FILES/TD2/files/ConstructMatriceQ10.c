@@ -25,6 +25,29 @@ struct Matrice matrice(int nbl, int nbc, int *valeur)
 }
 
 
+struct Matrice multiplie(struct Matrice m1, struct Matrice m2) {
+    int* val;
+    for(int i = 0; i < m1.nb_lignes; i++) {
+        for(int j = 0; j < m1.nb_colonnes; j++) {
+            int a;
+
+            for(int k = 0; k < m1.nb_lignes; k++) {
+                a += m1.valeurs[i][j+k] * m2.valeurs[j+k][i];
+            }
+
+            val[i*m1.nb_colonnes + j] = a;
+        }
+    }
+
+    return matrice(m1.nb_lignes, m1.nb_colonnes, val);
+}
+
+
+void effacer(struct Matrice mat) {
+    free(mat.valeurs);
+}
+
+
 void affiche(struct Matrice mat) {
     for(int i = 0; i < mat.nb_lignes; i++) {
         for(int j = 0; j < mat.nb_colonnes; j++) {
