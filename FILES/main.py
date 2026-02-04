@@ -64,6 +64,9 @@ listCmd = [
 
         # lun. 2 févr. 12:16
         r'''find . -name age_total.c -exec bash -c "gcc testeur-nominal-age-total.c {} && ./a.out >/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mar. 3 févr. 19:53
+        r'''find . -name simple.c -exec bash -c "gcc -Werror {} && ./a.out >out.txt && grep -q 'Youpi \!$' out.txt && grep -q 'Super' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
 
@@ -86,6 +89,23 @@ listCmd = [
 
         # lun. 1 févr. 19:32
         r'''find . -name unsurdeux.c -exec bash -c "gcc -c -Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mar. 3 févr. 2026 20:54
+        r'''find . -name matrice.h -exec bash -c "gcc -Werror -fsyntax-only {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mar. 3 févr. 21:00
+        r'''find . -name matrice.c -exec bash -c "gcc -Werror -c {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mar. 3 févr. 21:39
+        r'''find . -name maximum.c -exec bash -c "gcc testeur-nominal-maximum.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort''',
+    ],
+
+    #--------TD3---------#
+
+    [
+        #
+        r'''find . -name readfile.c -exec bash -c "! grep -q fopen {} && grep -q 'open' {} && gcc {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
     ],
    ]
 

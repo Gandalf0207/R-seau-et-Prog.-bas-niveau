@@ -10,8 +10,3 @@ int maximum(int *t, int n) {
     }
     return max;
 }
-
-
-int main() {
-
-}
