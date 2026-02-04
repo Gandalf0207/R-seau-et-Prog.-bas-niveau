@@ -1,0 +1,17 @@
+À partir de ce TD, chaque étudiant dispose d'un fork créé en avance par M. Poupet. L'adresse de ce dépôt est de la forme https://gitlabinfo.iutmontp.univ-montp2.fr/reseau-basniveau/etu/clochettelf/TD3 .
+
+Dans les exercices de cette section nous allons utiliser les appels système open, read, write, lseek, close, stat ainsi que les fonctions de bibliothèque perror et exit.
+
+Commande du chef de projet (codes à mettre sur votre dépôt) :
+
+Le programme readfile.c avec, et seulement avec, les appels système open, read, write, close et les fonctions de bibliothèque exit et perror.
+synopsis : readfile fichier.txt
+affiche «opérande de fichier manquant» si le nombre d'arguments est égal à 1 ou «nombre d'arguments incorrect» si le nombre d'arguments est strictement plus grand que 2.
+Le programme copy.c avec, et seulement avec, les appels système open, read, write, close et les fonctions de bibliothèque exit, perror et, éventuellement, strlen.
+synopsis : copy source destination
+affiche "nombre d'arguments incorrect" le cas échéant
+Un fichier fonction-lireligne.c contenant une définition de la fonction int lireligne(int fd, char* buf, int n), sans main.
+La fonction lireligne doit lire la prochaine ligne à partir du descripteur de fichier d (en se basant sur le caractère '\n' qui marque la fin d'une ligne). La fonction doit retourner le nombre de caractères le la ligne lue (le caractère de fin de ligne compris) ou -1 en cas d'erreur (on supposera que la taille du buffer est toujours assez grande pour la ligne à lire).
+Vous ferez une première version qui lit dans le fichier octet par octet. Ensuite vous devrez faire une version optimisée qui lira n octets d'un seul coup et à l'aide de lseek pour revenir en arrière dans le fichier si besoin.
+le programme bigfich.c (à l'aide des appels système stat et write et des fonctions perror et strlen). Le programme devra afficher "opérande de fichier manquant" si la liste des arguments est vide.
+et, en sus des exercices du sujet, une définition de la fonction puts dans un fichier puts.c (puts(const char *s) writes the string s and a trailing newline to stdout.) avec l'AS write et la fonction de bibliothèque strlen.
