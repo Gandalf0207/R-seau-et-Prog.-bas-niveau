@@ -103,8 +103,11 @@ listCmd = [
     #--------TD3---------#
 
     [
-        #
+        # mar. 3 févr. 21:16
         r'''find . -name readfile.c -exec bash -c "! grep -q fopen {} && grep -q 'open' {} && gcc {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mer. 4 févr. 17:19
+        r'''find . -name copy.c -exec bash -c "gcc -Wall -Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
     ],
    ]
