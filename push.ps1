@@ -8,6 +8,6 @@ git push origin main
 
 # Push du dossier TP3 vers gitlabFolderTP3
 echo "2. Push du dossier TP3 vers GitLab spécifique..."
-git subtree push --prefix=FILES/TD3 gitlabFolderTP3 main
+git subtree push --prefix=FILES/TD3 gitlabFolderTP3 master
 
 echo "=== Terminé ==="
