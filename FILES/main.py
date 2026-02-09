@@ -119,6 +119,9 @@ listCmd = [
 
         # lun. 9 févr. 11:49
         r'''find . -name matrice.h -exec bash -c "gcc -c --include {} testeur-header-matrice.c && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # lun. 9 févr. 15:23
+        r'''find . -name matrice.c -exec bash -c "gcc testeur-nominal-affiche-matrice.c {} && ./a.out > out.txt && grep -Eq '^ *1 +2 +3 *$' out.txt && grep -Eq '^ *4 +5 +6 *$' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
 
     #--------TD3---------#

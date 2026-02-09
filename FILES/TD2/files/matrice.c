@@ -12,17 +12,17 @@ void affiche(struct Matrice mat) {
     }
 }
 
-int main() {
-    //TEST
+// int main() {
+//     //TEST
 
-    // int l1[3] = {1, 2, 3};
-    // int l2[3] = {4, 5, 6};
-    // int *v[2] = {l1, l2};
+//     // int l1[3] = {1, 2, 3};
+//     // int l2[3] = {4, 5, 6};
+//     // int *v[2] = {l1, l2};
 
-    // struct Matrice m = {
-    //     .nb_lignes = 2,
-    //     .nb_colonnes = 3,
-    //     .valeurs = v,
-    // };
-    // affiche(m);
-}
+//     // struct Matrice m = {
+//     //     .nb_lignes = 2,
+//     //     .nb_colonnes = 3,
+//     //     .valeurs = v,
+//     // };
+//     // affiche(m);
+// }
