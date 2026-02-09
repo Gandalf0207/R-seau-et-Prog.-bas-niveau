@@ -15,12 +15,3 @@ void minmax(int *t, int n, int *pmin, int *pmax) {
         }
     }
 }
-
-int main() {
-    int t[] = {-1, 4, 5, 9, 0, 3, 8, -6, 90, -123};
-    int pmin, pmax;
-
-    minmax(t, 10, &pmin, &pmax);
-    printf("pmax = %i, pmin = %i\n", pmax, pmin);
-
-}

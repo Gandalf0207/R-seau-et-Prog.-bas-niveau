@@ -67,6 +67,9 @@ listCmd = [
 
         # mar. 3 févr. 19:53
         r'''find . -name simple.c -exec bash -c "gcc -Werror {} && ./a.out >out.txt && grep -q 'Youpi \!$' out.txt && grep -q 'Super' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # ven. 6 févr. 09:36
+        r'''find . -name main-et-dbl.c -exec bash -c "gcc -Werror {} && (./a.out | grep -q 'résultat: 8' && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort | grep OK''',
     ],
 
 
@@ -98,16 +101,30 @@ listCmd = [
 
         # mar. 3 févr. 21:39
         r'''find . -name maximum.c -exec bash -c "gcc testeur-nominal-maximum.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort''',
+
+        # mer. 4 févr. 19:17
+        r'''find . -name maximum.h -exec bash -c "gcc -include {} -Werror -c testeur-header-maximum.c && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # ven. 6 févr. 20:29
+        r'''find . -name minmax.c -exec bash -c "gcc testeur-nominal-minmax.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ÉCHEC COMPIL." \; 2>/dev/null | sort''',
+
+        # dim. 8 févr. 07:56
+        r'''find . -name minmax.h -exec bash -c "gcc -Wall -Werror -c testeur-header-minmax.c -include {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # lun. 9 févr. 10:25
+        r'''find . -name nvtab.c -exec bash -c "gcc testeur-nominal-nvtab.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ÉCHEC COMPIL" \; 2>/dev/null | sort''',
+
+        # lun. 9 févr. 11:01
+        r'''find . -name unsurdeux.c -exec bash -c "gcc -Werror testeur-nominal-unsurdeux.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort''',
+
+        # lun. 9 févr. 11:49
+        r'''find . -name matrice.h -exec bash -c "gcc -c --include {} testeur-header-matrice.c && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
 
     #--------TD3---------#
 
     [
-        # mar. 3 févr. 21:16
-        r'''find . -name readfile.c -exec bash -c "! grep -q fopen {} && grep -q 'open' {} && gcc {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
-        # mer. 4 févr. 17:19
-        r'''find . -name copy.c -exec bash -c "gcc -Wall -Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
     ],
    ]
