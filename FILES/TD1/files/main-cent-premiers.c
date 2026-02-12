@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    for(int i = 1; i < 101; i++ ) {
-        printf("%i ", i);
-    }
+  for (int i = 1; i < 101; i++) {
+    printf("%i ", i);
+  }
 }

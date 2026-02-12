@@ -70,6 +70,9 @@ listCmd = [
 
         # ven. 6 févr. 09:36
         r'''find . -name main-et-dbl.c -exec bash -c "gcc -Werror {} && (./a.out | grep -q 'résultat: 8' && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort | grep OK''',
+
+        # mer. 11 févr. 22:51
+        r'''find . -name main-cent-premiers.c -exec bash -c "clang-format --style=LLVM --dry-run -Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
 
 
@@ -122,6 +125,9 @@ listCmd = [
 
         # lun. 9 févr. 15:23
         r'''find . -name matrice.c -exec bash -c "gcc testeur-nominal-affiche-matrice.c {} && ./a.out > out.txt && grep -Eq '^ *1 +2 +3 *$' out.txt && grep -Eq '^ *4 +5 +6 *$' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # jeu. 12 févr. 07:38
+        r'''find . -name maximum.c -exec bash -c "gcc testeur-nominal-maximum.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort | grep OK''',
     ],
 
     #--------TD3---------#
