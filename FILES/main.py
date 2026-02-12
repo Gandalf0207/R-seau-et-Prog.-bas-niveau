@@ -73,6 +73,10 @@ listCmd = [
 
         # mer. 11 févr. 22:51
         r'''find . -name main-cent-premiers.c -exec bash -c "clang-format --style=LLVM --dry-run -Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # jeu. 12 févr. 10:28
+        r'''find . -name main-ni-par-3-ni-par-7.c -exec bash -c "grep -q -e ' & ' -e 'continue' {} && echo {} ÉCHEC || echo {} OK" \; | sort''',
+
     ],
 
 
