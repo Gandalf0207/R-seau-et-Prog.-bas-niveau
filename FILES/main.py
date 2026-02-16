@@ -132,6 +132,18 @@ listCmd = [
 
         # jeu. 12 févr. 07:38
         r'''find . -name maximum.c -exec bash -c "gcc testeur-nominal-maximum.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort | grep OK''',
+
+        # sam. 14 févr. 16:24
+        r'''find . -name maximum.h -exec bash -c "gcc -include {} -Werror -c testeur-header-maximum.c && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # dim. 15 févr. 08:18
+        r'''find . -name lngcha.c -exec bash -c "gcc testeur-nominal-lngcha.c {} && ( ./a.out && echo {} OK || echo {} ÉCHEC ) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort | grep OK''',
+
+        #   dim. 15 févr. 08:51
+        r'''find . -name minmax.c -exec bash -c "gcc testeur-limite-minmax.c {} && (./a.out && echo {} OK || echo {} ERREUR) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort''',
+
+        # lun. 16 févr. 14:03
+        r'''find . -name minmax.h -exec bash -c "grep -q -e 'minmax.*\[\]' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
 
     #--------TD3---------#

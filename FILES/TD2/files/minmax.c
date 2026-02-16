@@ -1,11 +1,13 @@
 #include <stdio.h>
+#include <limits.h>
 
 
-void minmax(int *t, int n, int *pmin, int *pmax) {
-    *pmin = t[0];
-    *pmax =t[0];
+void minmax(int t[], int n, int *pmin, int *pmax) {
 
-    for(int i = 1; i < n; i++) {
+    *pmin = INT_MAX;
+    *pmax = INT_MIN;
+
+    for(int i = 0; i < n; i++) {
         if (t[i] > *pmax) {
             *pmax = t[i];
         }
