@@ -144,6 +144,9 @@ listCmd = [
 
         # lun. 16 févr. 14:03
         r'''find . -name minmax.h -exec bash -c "grep -q -e 'minmax.*\[\]' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # lun. 16 févr. 15:36
+        r'''find . -name minmax.h -exec bash -c "grep 'minmax' {} | grep -qHF '[]' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
 
     #--------TD3---------#
