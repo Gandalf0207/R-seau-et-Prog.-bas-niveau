@@ -9,10 +9,14 @@ int palindrome(char *s) {
         len--;
     }
 
-    for (int i = 0; i < len / 2; i++) {
-        if (s[i] != s[len - 1 - i]) {
-            return 0;
+    int i = 0;
+    int valueReturn = 1;
+    while(i < len/2 && valueReturn == 1) {
+        if(s[i] != s[len - 1 - i]) {
+            valueReturn = 0;
+        } else {
+            i++;
         }
     }
-    return 1;
+    return valueReturn;
 }

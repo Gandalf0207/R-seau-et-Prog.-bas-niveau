@@ -77,6 +77,9 @@ listCmd = [
         # jeu. 12 févr. 10:28
         r'''find . -name main-ni-par-3-ni-par-7.c -exec bash -c "grep -q -e ' & ' -e 'continue' {} && echo {} ÉCHEC || echo {} OK" \; | sort''',
 
+        # mer. 18 févr. 19:23
+        r'''find . -name palindrome.c -exec bash -c "clang-format {} > out.c && ! grep -q 'for (' out.c && ! grep break out.c && [ \$(grep -c 'return' out.c) -eq 1 ] && echo {} OK || echo {} ÉCHEC" \; | sort''',
+
     ],
 
 
@@ -147,6 +150,9 @@ listCmd = [
 
         # lun. 16 févr. 15:36
         r'''find . -name minmax.h -exec bash -c "grep 'minmax' {} | grep -qHF '[]' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # 18 févr. 2026 14:49
+        r'''find . -name nvtab.c -exec bash -c "gcc testeur-nominal-nvtab.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ÉCHEC COMPIL" \; 2>/dev/null | sort | grep OK''',
     ],
 
     #--------TD3---------#
