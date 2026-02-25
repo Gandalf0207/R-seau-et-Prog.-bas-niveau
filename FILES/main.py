@@ -80,6 +80,8 @@ listCmd = [
         # mer. 18 févr. 19:23
         r'''find . -name palindrome.c -exec bash -c "clang-format {} > out.c && ! grep -q 'for (' out.c && ! grep break out.c && [ \$(grep -c 'return' out.c) -eq 1 ] && echo {} OK || echo {} ÉCHEC" \; | sort''',
 
+        # 20 févr. 2026 20:35
+        r'''find . -name age_total.c -exec bash -c "gcc testeur-nominal-age-total.c {} && ./a.out >/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
 
