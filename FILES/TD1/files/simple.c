@@ -2,8 +2,7 @@
 
 #define MESSAGE "Super\n"
 
-int main()
-{
-    printf("Youpi !\n");
-    printf(MESSAGE);
+int main() {
+  printf("Youpi !\n");
+  printf(MESSAGE);
 }

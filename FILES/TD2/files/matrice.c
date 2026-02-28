@@ -2,14 +2,13 @@
 
 #include "matrice.h"
 
-
 void affiche(struct Matrice mat) {
-    for(int i = 0; i < mat.nb_lignes; i++) {
-        for(int j = 0; j < mat.nb_colonnes; j++) {
-            printf("%3i", mat.valeurs[i][j]);
-        }
-        printf("\n");
+  for (int i = 0; i < mat.nb_lignes; i++) {
+    for (int j = 0; j < mat.nb_colonnes; j++) {
+      printf("%3i", mat.valeurs[i][j]);
     }
+    printf("\n");
+  }
 }
 
 // int main() {

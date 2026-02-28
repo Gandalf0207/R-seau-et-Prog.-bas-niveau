@@ -82,6 +82,9 @@ listCmd = [
 
         # 20 févr. 2026 20:35
         r'''find . -name age_total.c -exec bash -c "gcc testeur-nominal-age-total.c {} && ./a.out >/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # jeu. 26 févr. 20:46
+        r'''find . -name simple.c -exec bash -c "clang-format --dry-run -Werror -style='{SeparateDefinitionBlocks: Always}' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
     ],
 
 
@@ -133,7 +136,7 @@ listCmd = [
         r'''find . -name matrice.h -exec bash -c "gcc -c --include {} testeur-header-matrice.c && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
         # lun. 9 févr. 15:23
-        r'''find . -name matrice.c -exec bash -c "gcc testeur-nominal-affiche-matrice.c {} && ./a.out > out.txt && grep -Eq '^ *1 +2 +3 *$' out.txt && grep -Eq '^ *4 +5 +6 *$' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+        r'''find . -name matrice.find . -name simple.c -exec bash -c "clang-format --dry-run -Werror -style='{SeparateDefinitionBlocks: Always}' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sortc -exec bash -c "gcc testeur-nominal-affiche-matrice.c {} && ./a.out > out.txt && grep -Eq '^ *1 +2 +3 *$' out.txt && grep -Eq '^ *4 +5 +6 *$' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
         # jeu. 12 févr. 07:38
         r'''find . -name maximum.c -exec bash -c "gcc testeur-nominal-maximum.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort | grep OK''',
