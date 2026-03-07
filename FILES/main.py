@@ -85,6 +85,12 @@ listCmd = [
 
         # jeu. 26 févr. 20:46
         r'''find . -name simple.c -exec bash -c "clang-format --dry-run -Werror -style='{SeparateDefinitionBlocks: Always}' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # sam. 7 mars 08:55
+        r'''find . -name main-et-dbl.c -exec bash -c "clang-format --dry-run --Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # sam. 7 mars 09:06
+        r'''find . -name main-cent-premiers.c -exec bash -c "clang-format --dry-run --Werror {} && gcc -Werror {} && ./a.out | grep -e '^1 2 3 4 5' | grep -q '96 97 98 99 100[ ]$' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
 
@@ -158,6 +164,9 @@ listCmd = [
 
         # 18 févr. 2026 14:49
         r'''find . -name nvtab.c -exec bash -c "gcc testeur-nominal-nvtab.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ÉCHEC COMPIL" \; 2>/dev/null | sort | grep OK''',
+
+        # sam. 7 mars 09:17
+        r'''find . -name matrice.h -exec bash -c "gcc -c --include {} testeur-header-matrice.c && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
     #--------TD3---------#
