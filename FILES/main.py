@@ -91,6 +91,9 @@ listCmd = [
 
         # sam. 7 mars 09:06
         r'''find . -name main-cent-premiers.c -exec bash -c "clang-format --dry-run --Werror {} && gcc -Werror {} && ./a.out | grep -e '^1 2 3 4 5' | grep -q '96 97 98 99 100[ ]$' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # mer. 11 mars 21:27
+        r'''find . -name main-ni-par-3-ni-par-7.c -exec bash -c "gcc -Werror {} && ./a.out | tr '\n' ' ' | grep -q '1 2 4 5 8 10 11 13 16 17 19 20 22.*88 89 92 94 95 97 100' && ! grep -q -e ' & ' -e 'continue' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
 
@@ -167,12 +170,14 @@ listCmd = [
 
         # sam. 7 mars 09:17
         r'''find . -name matrice.h -exec bash -c "gcc -c --include {} testeur-header-matrice.c && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # jeu. 12 mars 21:58
+        r'''find . -name matrice.c -exec bash -c "gcc -Werror testeur-nominal-affiche-matrice.c {} && ./a.out > out.txt && grep -Eq '^ *1 +2 +3 *$' out.txt && grep -Eq '^ *4 +5 +6 *$' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
     #--------TD3---------#
 
     [
-
 
     ],
    ]
