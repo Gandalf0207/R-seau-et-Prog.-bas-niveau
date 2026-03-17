@@ -94,6 +94,19 @@ listCmd = [
 
         # mer. 11 mars 21:27
         r'''find . -name main-ni-par-3-ni-par-7.c -exec bash -c "gcc -Werror {} && ./a.out | tr '\n' ' ' | grep -q '1 2 4 5 8 10 11 13 16 17 19 20 22.*88 89 92 94 95 97 100' && ! grep -q -e ' & ' -e 'continue' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # mar. 17 mars 09:27
+        r'''find . -name lngcha.c -exec bash -c "gcc testeur-nominal-particulier-lngcha.c {} && ./a.out && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mar. 17 mars 09:46
+        r'''find . -name palindrome.c -exec bash -c "clang-format {} | grep -q 'while (.*&&.*)' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mar. 17 mars 10:42
+        r'''find . -name age_total.c -exec bash -c "clang-format --dry-run --Werror {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
+
+        # mar. 17 mars 11:30 // 2 tests
+        r'''find . -name simple.c -exec bash -c "clang-format --dry-run -Werror {} && gcc -Werror {} && ./a.out >out.txt && grep -q 'Youpi \!$' out.txt && grep -q 'Super' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+        r'''find . -name simple.c -exec bash -c "clang-format --dry-run -Werror {} && gcc -Werror {} && ./a.out >out.txt && grep -q 'Youpi \!$' out.txt && grep -q 'Super' out.txt && grep '\#define MESSAGE' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
 
