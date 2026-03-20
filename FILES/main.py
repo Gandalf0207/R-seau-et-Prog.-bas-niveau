@@ -186,6 +186,15 @@ listCmd = [
 
         # jeu. 12 mars 21:58
         r'''find . -name matrice.c -exec bash -c "gcc -Werror testeur-nominal-affiche-matrice.c {} && ./a.out > out.txt && grep -Eq '^ *1 +2 +3 *$' out.txt && grep -Eq '^ *4 +5 +6 *$' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # mer 18 mars 19:22
+        r'''find . -name maximum.c -exec bash -c "gcc deuxième-testeur-pour-maximum.c {} && (./a.out && echo {} OK || echo {} ÉCHEC) || echo {} ÉCHEC COMPIL." \; 2>/dev/null | sort''',
+
+        # jeu. 19 mars 09:24
+        r'''find . -name maximum.h -exec bash -c "grep -q -e 'Donnée :' -e 'Résultat :' {} && echo {} OK || echo {} ÉCHEC" \; | sort''',
+
+        # jeu. 19 mars 09:32
+        r'''find . -name minmax.c -exec bash -c "gcc testeur-nominal-minmax.c {} && ./a.out >/dev/null && gcc testeur-limite-minmax.c {} && ./a.out >/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
     #--------TD3---------#

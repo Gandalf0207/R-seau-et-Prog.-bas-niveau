@@ -1,3 +1,7 @@
 #include <stdio.h>
 
-int maximum(int t[], int b);
+/**
+ * Donnée : (le domaine de définition de la fonction)
+ * Résultat : ...
+ */
+int maximum(int T[], int n);
