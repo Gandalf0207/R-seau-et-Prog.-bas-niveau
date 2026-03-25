@@ -1,0 +1,21 @@
+Check-list (codes à mettre sur git, dans le fork qui vous a été attribué) :
+
+Exercice 1 :
+- ex1fork.c (Q. 1, 2 & 3) // les AS fork et getpid
+- ex1tab.c (Q. 4, 5 & 6) // l'AS waitpid et la macro WEXITSTATUS
+- negative.c (Q. 7 & 8) // au sujet de la table des descripteurs propre
+à chaque processus
+
+Exercice 2 :
+- ex2psl.c (Q1) // la fonction execlp
+- ex2lancer.c (Q2 : fork, execve (ou, plus commode ici, execvp) et wait)
+
+Exercice 3 :
+- ex3tube.c (Q4 - avec les appels système pipe, fork, dup2, execvp, close,
+waitpid et les fonctions de bibliothèques perror et strcmp - Vous trouverez
+ici une base pour démarrer)
+- ex3redirections.c (Q5 - avec les AS open, dup2 et la fonction de
+bibliothèque strcmp)
+
+
+Pour ces trois exercices, vous pouvez aussi utiliser strlen, perror et write le cas échéant.

@@ -1,0 +1,14 @@
+# Ignore all files
+*.o
+*.exe
+
+# Unignore specific extensions
+!.gitignore
+!*.md
+!*.c
+!*.ppm
+!*.pgm
+!*.wav
+
+# Unignore directories
+!*/

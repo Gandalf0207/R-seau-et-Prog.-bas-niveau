@@ -1,0 +1,6 @@
+open -> #include <fcntl.h>
+close -> #include <unistd.h>
+read -> #include <unistd.h>
+write -> #include <unistd.h>
+lseek -> #include <unistd.h>
+errno -> #include <errno.h>

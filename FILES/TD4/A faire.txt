@@ -1,0 +1,32 @@
+L'adresse de votre dépôt est de la forme https://gitlabinfo.iutmontp.univ-montp2.fr/reseau-basniveau/etu/clochettelf/TD4 (mais vous devez remplacer clochettelf par votre propre identifiant sur gitlabinfo).
+
+Comme pour le précédent TD :
+
+- vous devez utiliser les fonctions open, close, read, write, et lseek
+pour manipuler les fichiers directement en utilisant les appels système.
+
+- et vous ne devez pas utiliser les fonctions de plus haut niveau telles
+que fopen, fgetc, fputc, printf, system, etc.
+
+- cependant vous pouvez utiliser perror pour l'affichage des erreurs
+système ainsi que malloc et free pour la gestion de la mémoire et
+enfin strlen.
+
+
+Commande du chef de projet (codes à mettre sur git) :
+
+- negative.c
+    - synopsis : negative input-file output-file
+    - affiche "nombre d'arguments incorrect" le cas échéant
+
+- intensite.c // avec en plus strtol ou atoi
+    - synopsis : intensite input-file output-file delta
+    - affiche "nombre d'arguments incorrect" le cas échéant
+
+- mono.c
+    - synopsis : mono input-file output-file
+    - affiche "nombre d'arguments incorrect" le cas échéant
+
+- ascii-check
+    - synopsis : ascii-check input-file
+    - affiche "compatible ASCII" ou "incompatible ASCII"

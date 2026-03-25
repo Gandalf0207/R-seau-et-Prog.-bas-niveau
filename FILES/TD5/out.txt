@@ -1,0 +1,22 @@
+[avant fork] PID: 5673
+PID: 5674 
+[avant fork] PID: 5673
+PID: 5673, retour fork: 5674 
+PID: 5673, retour fork: 5675 
+PID: 5676 
+[avant fork] PID: 5673
+PID: 5673, retour fork: 5674 
+PID: 5675 
+[avant fork] PID: 5673
+PID: 5673, retour fork: 5674 
+PID: 5673, retour fork: 5675 
+PID: 5673, retour fork: 5676 
+Je suis le processus fils 5673. Mon tableau de pid contient les entiers 5674, 5675 et 5676.
+code de retour 0
+terminé PID: 5674
+Je suis le processus fils 5673. Mon tableau de pid contient les entiers 5674, 5675 et 5676.
+code de retour 1
+terminé PID: 5675
+Je suis le processus fils 5673. Mon tableau de pid contient les entiers 5674, 5675 et 5676.
+code de retour 2
+terminé PID: 5676

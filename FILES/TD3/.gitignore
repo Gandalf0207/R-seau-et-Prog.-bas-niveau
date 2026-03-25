@@ -1,0 +1,12 @@
+# Ignore all files
+*o
+*json
+
+# Unignore specific extensions
+!.gitignore
+!*.md
+!*.c
+!*.txt
+
+# Unignore directories
+!*/
