@@ -107,6 +107,9 @@ listCmd = [
         # mar. 17 mars 11:30 // 2 tests
         r'''find . -name simple.c -exec bash -c "clang-format --dry-run -Werror {} && gcc -Werror {} && ./a.out >out.txt && grep -q 'Youpi \!$' out.txt && grep -q 'Super' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
         r'''find . -name simple.c -exec bash -c "clang-format --dry-run -Werror {} && gcc -Werror {} && ./a.out >out.txt && grep -q 'Youpi \!$' out.txt && grep -q 'Super' out.txt && grep '\#define MESSAGE' {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # lun. 23 mars 21:00
+        r'''find . -name main-et-dbl.c -exec bash -c "clang-format --dry-run --Werror {} && gcc -Werror {} && (./a.out | grep -q 'résultat: 8' && echo {} OK || echo {} ÉCHEC) || echo {} ERREUR COMPIL." \; 2>/dev/null | sort | grep OK''',
     ],
 
 
@@ -195,6 +198,9 @@ listCmd = [
 
         # jeu. 19 mars 09:32
         r'''find . -name minmax.c -exec bash -c "gcc testeur-nominal-minmax.c {} && ./a.out >/dev/null && gcc testeur-limite-minmax.c {} && ./a.out >/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
+        # lun. 23 mars 21:39
+        r'''find . -name minmax.h -exec bash -c "grep 'minmax' {} | grep -qHF '[]' && gcc -Wall -Werror -c testeur-header-minmax.c -include {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
     ],
 
     #--------TD3---------#
