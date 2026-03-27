@@ -7,16 +7,16 @@
  */
 int main(int argc, char** argv) {
 
-
     // check des arguments
     if(argc != 3) {
-        if(argc == 1 || argc == 2) {
-            printf("opérande de fichier manquant");
-            exit(1);
+        if(argc == 1) {
+            write(2, "opérande de fichier manquant", 29);
+            return(EXIT_FAILURE);
         }
         else {
-            printf("nombre d'arguments incorrect");
-            exit(1);
+            char* str = "nombre d'arguments incorrect\n";
+            write(2, str, 29);
+            return(EXIT_FAILURE);
         }
     }
 

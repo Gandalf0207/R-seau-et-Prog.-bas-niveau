@@ -84,7 +84,9 @@ listCmd = [
         r'''find . -name mono.c -exec bash -c "rm -f out.wav && gcc {} && ./a.out test.wav out.wav && cmp -n 44 out.wav test-en-mono.wav >/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
         r'''find . -name mono.c -exec bash -c "rm -f out.wav ; gcc {} && ./a.out test.wav out.wav && cmp out.wav test-en-mono.wav 1>/dev/null 2>/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
 
-        
+        # 26 mars 2026 22:27
+        r'''find . -name ascii-check.c -exec bash -c "grep -qe break {} && echo {} ÉCHEC || echo {} OK" \; | sort''',
+
 
     ],
    ]

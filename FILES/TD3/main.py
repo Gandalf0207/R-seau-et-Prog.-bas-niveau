@@ -89,6 +89,12 @@ listCmd = [
 
         # jeu. 19 mars 16:34
         r'''find . -name getchar.c -exec bash -c "echo -n {} '... '; gcc testeur-getchar.c {} && echo -n 'z' | ./a.out | grep -c 'z' | grep -q 1 && echo OK || echo ÉCHEC" \; | sort''',
+
+        # jeu. 26 mars 22:11
+        r'''find . -name fonction-lireligne.c -exec bash -c "gcc -Wall -Werror testeur-nominal-lireligne.c {} && ./a.out < testeur-nominal-lireligne.c >/dev/null && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK'''
+
+        # 26 mars 2026 21:49
+        r'''find . -name copy.c -exec bash -c "gcc -Wall -Werror {} -o copier 2>/dev/null && ! ./copier {} >/dev/null 2>message.txt && grep -q 'nombre d.arguments incorrect' message.txt && echo {} OK || echo {} ÉCHEC" \; | grep -e ÉCHEC -e OK | sort''',
     ],
 
    ]
