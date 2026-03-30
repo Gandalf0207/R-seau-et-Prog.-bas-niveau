@@ -81,6 +81,9 @@ listCmd = [
 
         # ven. 20 mars 12:32
         r'''find . -name ex2psl.c -exec bash -c "grep -q execlp {} && gcc -Werror {} 2>/dev/null && ./a.out | grep -q find && echo {} OK || echo {} ÉCHEC" \; | sort | grep OK''',
+
+        # dim. 29 mars 21:51
+        r'''find . -name ex3tube.c -exec bash -c "gcc -Werror {} 2>/dev/null && ./a.out ls -R --pipe grep ex3tube.c | grep -q ex3tube.c && echo {} OK|| echo {} ÉCHEC" \; | sort | grep OK''',
     ],
    ]
 
