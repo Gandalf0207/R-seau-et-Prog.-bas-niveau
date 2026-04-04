@@ -6,11 +6,11 @@ int main(int argc, char **argv) {
   int i;
   printf("PID: %d (avant fork)\n", getpid());
 
-  sleep((unsigned int)5);
   i = fork();
   if (i != 0) { // code du pere
     printf("PID: %d, résultat du fork: %d\n", getpid(), i);
   } else { // code du fils
+    sleep((unsigned int)5);
     printf("PID: %d, résultat du fork: %d \n", getpid(), i);
   }
   // code des deux
