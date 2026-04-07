@@ -3,6 +3,7 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+#include <string.h>
 
 /**
  * Prend en argument une liste de noms de fichiers et affiche le nom du plus grand d'entre eux.
@@ -10,10 +11,10 @@
  */
 int main(int argc, char **argv) {
 
-
     if(argc < 2) {
-        printf("opérande de fichier manquant");
-        exit(1);
+        char* str = "opérande de fichier manquant";
+        write(2, str, strlen(str));
+        return EXIT_FAILURE;
     }
 
     struct stat buf;
@@ -32,6 +33,7 @@ int main(int argc, char **argv) {
             perror(argv[i]);
         }
     }
-    printf("%s\n", maxName);
+    char* str = maxName;
+    write(1, str, strlen(str));
     return 0;
 }

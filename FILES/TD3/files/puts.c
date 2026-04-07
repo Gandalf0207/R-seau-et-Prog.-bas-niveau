@@ -6,6 +6,6 @@
 int puts(const char* s) {
     int len = strlen(s);
     write(STDOUT_FILENO, s, len);
-    printf("\n");
+    write(STDOUT_FILENO, "\n", 1);
     return 1;
 };

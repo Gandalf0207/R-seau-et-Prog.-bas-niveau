@@ -87,6 +87,9 @@ listCmd = [
         # 26 mars 2026 22:27
         r'''find . -name ascii-check.c -exec bash -c "grep -qe break {} && echo {} ÉCHEC || echo {} OK" \; | sort''',
 
+        # dim. 5 avr. 19:06
+        r'''find . -name negative.c -exec bash -c "! grep -e printf -e scanf {} && gcc -Wall -Werror {} && ./a.out test.pgm out.pgm && cmp out.pgm test-en-négatif.pgm && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+
 
     ],
    ]

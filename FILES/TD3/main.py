@@ -95,6 +95,14 @@ listCmd = [
 
         # 26 mars 2026 21:49
         r'''find . -name copy.c -exec bash -c "gcc -Wall -Werror {} -o copier 2>/dev/null && ! ./copier {} >/dev/null 2>message.txt && grep -q 'nombre d.arguments incorrect' message.txt && echo {} OK || echo {} ÉCHEC" \; | grep -e ÉCHEC -e OK | sort''',
+
+        # lun. 6 avr. 18:57
+        r'''find . -name bigfich.c -exec bash -c "grep -q -e break -e continue -e printf {} && echo {} ÉCHEC || echo {} OK" \; 2>/dev/null | sort''',
+        
+        # lun. 6 avr. 20:43
+        r'''find . -name puts.c -exec bash -c "grep -q printf {} && echo {} ÉCHEC || echo {} OK" \;''',
+
+
     ],
 
    ]

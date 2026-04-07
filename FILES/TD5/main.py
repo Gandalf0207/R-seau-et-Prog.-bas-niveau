@@ -88,6 +88,11 @@ listCmd = [
         # 1 avr. 2026 09:21
         r'''find . -name ex1fork.c -exec bash -c "clang-format {} | grep -v '^ *//' | grep -A 1 'else' | grep -q sleep && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort''',
 
+        # 6 avr. 2026 18:09
+        r'''find . -name ex3redirections.c -exec bash -c "gcc -Werror {} && ./a.out /usr/bin/date | grep -q 2026 && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
+        r'''find . -name ex3redirections.c -exec bash -c "gcc -Werror {} && ./a.out /usr/bin/cat --input wicked.txt | grep 'Elphaba et Glinda' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | grep OK | sort''',
+        r'''find . -name ex3redirections.c -exec bash -c "! grep printf {} && gcc -Werror {} && ./a.out /usr/bin/cat --input wicked.txt | grep 'Elphaba et Glinda' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | grep OK''',
+
     ],
    ]
 
