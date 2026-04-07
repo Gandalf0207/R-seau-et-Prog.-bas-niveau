@@ -93,6 +93,9 @@ listCmd = [
         r'''find . -name ex3redirections.c -exec bash -c "gcc -Werror {} && ./a.out /usr/bin/cat --input wicked.txt | grep 'Elphaba et Glinda' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | grep OK | sort''',
         r'''find . -name ex3redirections.c -exec bash -c "! grep printf {} && gcc -Werror {} && ./a.out /usr/bin/cat --input wicked.txt | grep 'Elphaba et Glinda' && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | grep OK''',
 
+        # 7 avr. 2026 6:49
+        r'''find . -name ex1tab.c -exec bash -c "gcc -Werror {} && ./a.out > out.txt && grep -qw '0' out.txt && grep -qw '1' out.txt && grep -qw '2' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK'''
+
     ],
    ]
 
