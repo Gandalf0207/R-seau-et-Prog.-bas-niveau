@@ -13,12 +13,12 @@ int main(int argc, char** argv) {
         if(argc == 1) {
             char* text = "opérande de fichier manquant";
             write(STDOUT_FILENO, text, 29);
-            exit(1);
+            return EXIT_FAILURE;
         }
         else {
             char* text = "nombre d'arguments incorrect";
             write(STDOUT_FILENO, text, 30);
-            exit(1);
+            return EXIT_FAILURE;
         }
     }
 
@@ -37,7 +37,7 @@ int main(int argc, char** argv) {
         size = read(fd, buf, 31); // 32 = taille de traitement
 
         if(size < 0) {
-            exit(1); // il y a eu une erreur
+            perror("read element");
         };
 
         buf[size] = '\0';
@@ -46,4 +46,5 @@ int main(int argc, char** argv) {
 
 
     close(fd);
+    return EXIT_SUCCESS;
 }

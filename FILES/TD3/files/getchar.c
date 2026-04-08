@@ -3,9 +3,9 @@
 #include <unistd.h>
 
 int getchar(void) {
-    char buf[1];
-    int err = read(0, buf, 1);
-    if(err == 1) return (int)buf[0];
-    if(err < 0) perror("getchar");
-    return EOF;
+    unsigned char c;
+    if (read(0, &c, 1) == 1) {
+        return (int)c;
+    }
+    else return EOF;
 }

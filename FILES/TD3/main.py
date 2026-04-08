@@ -98,11 +98,18 @@ listCmd = [
 
         # lun. 6 avr. 18:57
         r'''find . -name bigfich.c -exec bash -c "grep -q -e break -e continue -e printf {} && echo {} ÉCHEC || echo {} OK" \; 2>/dev/null | sort''',
-        
+
         # lun. 6 avr. 20:43
         r'''find . -name puts.c -exec bash -c "grep -q printf {} && echo {} ÉCHEC || echo {} OK" \;''',
 
+        # 7 avr. 2026 22:08
+        r'''find . -name readfile.c -exec bash -c "grep -q EXIT_FAILURE {} && grep -q EXIT_SUCCESS {} && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null''',
 
+        # mar. 7 avr. 22:58
+        r'''find . -name getchar.c -exec bash -c "echo -n {} '... '; gcc testeur-getchar.c {} && echo -n 'z' | ./a.out | grep -c 'z' | grep -q 1 && echo OK || echo ÉCHEC" \; | sort''',
+        r'''find . -name getchar.c -exec bash -c "echo -n {} '... '; gcc testeur-erreur-getchar.c {} && ./a.out < /dev/null && echo OK || echo ÉCHEC" \; | sort''',
+        r'''find . -name getchar.c -exec bash -c "echo -n {} '... '; gcc testeur-erreur-getchar.c {} && ./a.out < /dev/null && ! grep -q perror {} && echo OK || echo ÉCHEC" \; | sort''',
+        
     ],
 
    ]
