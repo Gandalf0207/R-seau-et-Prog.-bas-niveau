@@ -96,6 +96,10 @@ listCmd = [
         # 7 avr. 2026 6:49
         r'''find . -name ex1tab.c -exec bash -c "gcc -Werror {} && ./a.out > out.txt && grep -qw '0' out.txt && grep -qw '1' out.txt && grep -qw '2' out.txt && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK'''
 
+
+         # 8 avr. 2026 14:29
+        r'''find . -name negative.c -exec bash -c 'rm -f out.pgm ; grep -q fork {} && gcc -Werror {} && ./a.out test.pgm out.pgm && ! cmp -s out.pgm test-en-negatif.pgm && ! cmp -s out.pgm test-en-négatif.pgm && cmp -n 16 out.pgm test.pgm && echo {} OK || echo {} ÉCHEC' \; | sort | grep OK''',
+  
     ],
    ]
 

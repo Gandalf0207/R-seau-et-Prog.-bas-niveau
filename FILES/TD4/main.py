@@ -91,6 +91,10 @@ listCmd = [
         r'''find . -name negative.c -exec bash -c "! grep -e printf -e scanf {} && gcc -Wall -Werror {} && ./a.out test.pgm out.pgm && cmp out.pgm test-en-négatif.pgm && echo {} OK || echo {} ÉCHEC" \; 2>/dev/null | sort | grep OK''',
 
 
+        # mer. 8 avr. 14:03
+        r'''find . -name intensite.c -exec bash -c "gcc -Werror {} && ./a.out 1>/dev/null 2>err.txt && echo {} ÉCHEC || (wc -c err.txt | grep -q '29 err.txt' && ([ -e out.ppm ] && rm -f out.ppm ; gcc -Werror {} && ./a.out test.ppm out.ppm 32 && cmp out.ppm test-plus-32.ppm && echo {} OK ) || echo {} ÉCHEC)" \; | grep OK | sort''',
+    
+
     ],
    ]
 
